@@ -1,8 +1,51 @@
 const mongoose= require('mongoose')
 
-// const appointmentSchema= new mongoose.Schema({
+const appointmentSchema= new mongoose.Schema({
+    patientName:{
+        type: String,
+        required: true,
+    },
 
-// })
+    appointmentTime:{
+        type: String,
+        required: true,
+    },
+
+    bloodGroup:{
+        type: String,
+        required: true,
+    },
+
+    userProblem:{
+        type: String,
+        required: true,
+    },
+
+    phoneNumber:{
+        type: String,
+        required: true,
+    },
+
+    Age:{
+        type:Number,
+        required: true,
+    },
+
+    sex:{
+        type: String,
+        required: true,
+    },
+
+    weight:{
+        type: Number,
+        required: true,
+    },
+
+    height:{
+        type: Number,
+        required: true,
+    },
+},{timestamps: true})
 
 const userSchema= new mongoose.Schema({
     userName:{
@@ -25,26 +68,6 @@ const userSchema= new mongoose.Schema({
         type:String,
     },
 
-    phoneNumber:{
-        type: Number,
-    },
-
-    Age:{
-        type:Number,
-    },
-
-    sex:{
-        type: String,
-    },
-
-    weight:{
-        type: Number,
-    },
-
-    height:{
-        type: Number,
-    },
-
     address:{
         type: String,
     },
@@ -54,8 +77,7 @@ const userSchema= new mongoose.Schema({
         default:[],
     }
 
-
-})
+},{timestamps: true})
 
 const User= mongoose.model("User",userSchema)
 module.exports= User
