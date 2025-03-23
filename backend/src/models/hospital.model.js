@@ -27,12 +27,12 @@ const hospitalSchema= new mongoose.Schema({
         required: true,
     },
     
-    Hospitalcity:{
+    hospitalCity:{
         type: String,
         required: true,
     },
  
-    HospitalPinCode:{
+    hospitalPinCode:{
         type: String,
         required: true,
     },
